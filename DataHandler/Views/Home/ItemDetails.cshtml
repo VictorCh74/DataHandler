@@ -1,0 +1,19 @@
+﻿ 
+@model Person
+    
+<div class="details">
+    <form method="post" asp-controller="Home" asp-action="SaveChanges" id="det_form">
+        <div>
+            Стаж<br>
+            <textarea readonly class="det_item">@Model.WorkExperience</textarea>
+        </div>
+        <div>
+            Оклад<br>
+            <textarea readonly class="det_item">@Model.Salary</textarea>
+        </div>
+        <div>
+            Дата назначения на должность<br>
+            <textarea readonly class="det_item">@Model.EmpDate</textarea>
+        </div>
+    </form>
+</div>

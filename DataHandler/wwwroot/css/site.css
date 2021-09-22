@@ -34,4 +34,43 @@ body {
     .carousel-caption {
         display: none;
     }
+
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+    }
+}
+.staff_items {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-basis: 50%;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+.item-row {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-basis: 20%;
+}
+.details {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.details_area {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
