@@ -2,18 +2,19 @@
 @model Person
     
 <div class="details">
-    <form method="post" asp-controller="Home" asp-action="SaveChanges" id="det_form">
+    <form method="post" asp-controller="Home" asp-action="SaveChanges" asp-for="data" id="det_form">
+        <textarea hidden name="Id" value=@ViewBag.CurrentItem />
         <div>
             Стаж<br>
-            <textarea readonly class="det_item">@Model.WorkExperience</textarea>
+            <textarea readonly class="det_item" name="WorkExperience">@Model.WorkExperience</textarea>
         </div>
         <div>
             Оклад<br>
-            <textarea readonly class="det_item">@Model.Salary</textarea>
+            <textarea readonly class="det_item" name="Salary">@Model.Salary</textarea>
         </div>
         <div>
             Дата назначения на должность<br>
-            <textarea readonly class="det_item">@Model.EmpDate</textarea>
+            <textarea readonly class="det_item" name="EmpDate">@Model.EmpDate</textarea>
         </div>
     </form>
 </div>
