@@ -33,8 +33,23 @@ namespace DataHandler.Controllers
         }
 
         [HttpPost]
-        public void SaveChanges(NewPersonData data) {
-            
+        public IActionResult SaveChanges(NewPersonData data) {
+            var person = Staff.Where(p => p.Id == data.Id).FirstOrDefault();
+            var newPerson = new Person() {
+                Id = person.Id,
+                Name = person.Name,
+                SecondName = person.SecondName,
+                FatherName = person.FatherName,
+                Position = person.Position,
+                WorkExperience = data.WorkExperience,
+                EmpDate = data.EmpDate,
+                Salary = person.Salary
+            };
+            Staff.Remove(person);
+            Staff.Add(newPerson);
+            Staff.OrderBy(p => p.Id);
+
+            return RedirectToAction("Index" , "Home" , data.Id);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

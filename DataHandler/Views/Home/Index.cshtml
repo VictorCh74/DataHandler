@@ -10,10 +10,10 @@
         {
             <form method="post" asp-controller="Home" asp-action="Index" class="item-row" >
                 <input type="submit" name="currentItem" value="@p.Id">
-                <div> @p.Name</div>
-                <div> @p.SecondName</div>
-                <div> @p.FatherName</div>
-                <div> @p.Position</div> 
+                <div class="personName"> @p.Name</div>
+                <div class="personName"> @p.SecondName</div>
+                <div class="personName"> @p.FatherName</div>
+                <div class="position"> @p.Position</div> 
             </form>
         }
     </div >

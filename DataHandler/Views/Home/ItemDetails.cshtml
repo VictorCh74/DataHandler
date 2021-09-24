@@ -3,7 +3,6 @@
     
 <div class="details">
     <form method="post" asp-controller="Home" asp-action="SaveChanges" asp-for="data" id="det_form">
-        <textarea hidden name="Id" value=@ViewBag.CurrentItem />
         <div>
             Стаж<br>
             <textarea readonly class="det_item" name="WorkExperience">@Model.WorkExperience</textarea>
@@ -16,5 +15,6 @@
             Дата назначения на должность<br>
             <textarea readonly class="det_item" name="EmpDate">@Model.EmpDate</textarea>
         </div>
+        <div><textarea name="Id" hidden >@ViewBag.CurrentItem</textarea></div>
     </form>
 </div>
