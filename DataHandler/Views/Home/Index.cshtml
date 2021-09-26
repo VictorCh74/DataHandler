@@ -8,28 +8,29 @@
     <div class="staff_items">
         @foreach (Person p in ViewBag.Staff)
         {
-            <form method="post" asp-controller="Home" asp-action="Index" class="item-row" >
-                <input type="submit" name="currentItem" value="@p.Id">
-                <div class="personName"> @p.Name</div>
-                <div class="personName"> @p.SecondName</div>
-                <div class="personName"> @p.FatherName</div>
-                <div class="position"> @p.Position</div> 
+            <form method="post" asp-controller="Home" asp-action="Index" class="item-row">
+                <div id="@p.Id" onclick="changeBack(id)" class="@ViewBag.Staff[p.Id-1].CssClass">
+                    <input type="submit" name="currentItem" value="@p.Id">
+                    <label class="personName"> @p.Name</label>
+                    <label class="personName"> @p.SecondName</label>
+                    <label class="personName"> @p.FatherName</label>
+                    <label class="pos"> @p.Position</label>
+                </div>
             </form>
         }
-    </div >
+    </div>
     <div class="details_area">
         <button id="editBtn">Редактировать</button>
         <div class="column">
             @await Html.PartialAsync("ItemDetails", (ViewBag.Staff as List<Person>).Where(p => p.Id == ViewBag.CurrentItem).FirstOrDefault())
-        </div> 
+        </div>
         <button disabled id="saveBtn" form="det_form" type="submit">Сохранить</button>
     </div>
-    <script type="text/javascript"> 
+    <script type="text/javascript">
         editBtn.onclick = function () {
             document.getElementById("saveBtn").removeAttribute("disabled");
             var els = document.getElementsByClassName("det_item");
-
-            for (var i = 0; i < els.length; i++) {       
+            for (var i = 0; i < els.length; i++) {
                 els.item(i).removeAttribute("readonly");
             }
         }

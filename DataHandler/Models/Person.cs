@@ -15,5 +15,6 @@ namespace DataHandler.Models
         public int WorkExperience { get; set; }
         public DateTime EmpDate { get; set; }
         public int Salary { get; set; }
+        public string CssClass { get; set; }
     }
 }
