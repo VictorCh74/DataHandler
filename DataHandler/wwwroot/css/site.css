@@ -36,48 +36,51 @@ body {
 .row {
     display: flex;
     flex-direction: row;
-    flex-basis: 50%;
+    
     justify-content: space-around;
 }
 .staff_items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-basis: 70%;
 }
 .item-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .personName {
     background-color: #edebea;
     text-align: left;
-    width:150px;
+    width:10em;
 }
 
 .pos {
     background-color: #afeff4;
     text-align: left;
-    width:100px;
+    width:10em;
 }
 
 .details {
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     background-color: #dcf0f9;
     align-items:center ;
 }
 .details_area {
     
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 .selected-div {
-    background-color: #dcf0f9 ;
-    width: 100px ;
+    background-color: #dcf0f9;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content:center ;
 }
 .non-selected-div {
     background-color: #f8fbe4;
-    width: 100px;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: center;
 }

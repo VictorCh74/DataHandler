@@ -9,11 +9,16 @@
         </div>
         <div>
             Оклад<br>
-            <textarea readonly class="det_item" name="Salary">@Model.Salary</textarea>
+            <textarea readonly class="det_item" name="Salary">@Model.Salary</textarea> 
         </div>
         <div>
+            <script src="~/js/datepicker.js"></script>
+            <link rel="stylesheet" href="~/css/datepicker.material.css" > 
             Дата назначения на должность<br>
-                                        <textarea type="date" readonly class="det_item" name="EmpDate">@Model.EmpDate</textarea>
+            <input type="text" id="datepicker" readonly class="det_item" name="EmpDate" value="@Model.EmpDate">
+            <script type="text/javascript">
+                var datepicker = new Datepicker('#datepicker');
+            </script>
         </div>
         <div><textarea name="Id" hidden >@ViewBag.CurrentItem</textarea></div>
     </form>
