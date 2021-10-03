@@ -1,25 +1,51 @@
-﻿ 
+﻿
 @model Person
-    
-<div class="details">
+<div class="details_area">
+    <div><button id="editBtn" style="width:10em">Редактировать</button></div>
     <form method="post" asp-controller="Home" asp-action="SaveChanges" asp-for="data" id="det_form">
+        <div><label>Стаж</label></div>
         <div>
-            Стаж<br>
-            <textarea readonly class="det_item" name="WorkExperience">@Model.WorkExperience</textarea>
+            <textarea disabled class="det_item" name="WorkExperience" rows="1" style="width:10em">@Model.WorkExperience</textarea>
         </div>
         <div>
-            Оклад<br>
-            <textarea readonly class="det_item" name="Salary">@Model.Salary</textarea> 
+            <label>Оклад</label>
         </div>
+        <div>
+            <select disabled class="det_item" name="Salary" style="width:10em">
+                <option>@Model.Salary</option>
+                @foreach (Person p in ViewBag.Staff)
+                {
+                    <option>@p.Salary</option>
+                }
+            </select>
+        </div>
+
         <div>
             <script src="~/js/datepicker.js"></script>
-            <link rel="stylesheet" href="~/css/datepicker.material.css" > 
-            Дата назначения на должность<br>
-            <input type="text" id="datepicker" readonly class="det_item" name="EmpDate" value="@Model.EmpDate">
+            <link rel="stylesheet" href="~/css/datepicker.material.css">
+        </div>
+        <div>
+            <label>Дата назначения</label>
+        </div>
+        <div>
+            <input disabled class="det_item" type="text" id="datepicker" name="EmpDate" value="@Model.EmpDate" style="width:10em">
+        </div>
+        <div><textarea hidden name="Id">@Model.Id</textarea></div>
+        <div>
             <script type="text/javascript">
                 var datepicker = new Datepicker('#datepicker');
             </script>
         </div>
-        <div><textarea name="Id" hidden >@ViewBag.CurrentItem</textarea></div>
     </form>
+    <div><button disabled id="saveBtn" form="det_form" type="submit" style="width:10em">Сохранить</button></div>
+    <script type="text/javascript">
+        editBtn.onclick = function () {
+            document.getElementById("saveBtn").removeAttribute("disabled");
+            var els = document.getElementsByClassName("det_item");
+            for (var i = 0; i < els.length; i++) {
+                els.item(i).removeAttribute("disabled");
+            }
+        }
+    </script>
 </div>
+

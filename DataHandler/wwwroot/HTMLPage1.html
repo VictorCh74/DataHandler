@@ -1,0 +1,159 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - DataHandler</title>
+
+
+   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/site.css" />
+
+
+    <link rel="stylesheet" href="js/datepicker.material.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">DataHandler</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container body-content">
+
+        <div class="row">
+            <div class="staff_items">
+                <form method="post" class="item-row" action="/">
+                    <div id="1" onclick="changeBack(id)" class="selected-div">
+                        <input type="submit" name="currentItem" value="1">
+                        <label class="personName"> &#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;</label>
+                        <label class="personName"> &#x418;&#x432;&#x430;&#x43D;</label>
+                        <label class="personName"> &#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x447;</label>
+                        <label class="pos"> &#x414;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;</label>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+                <form method="post" class="item-row" action="/">
+                    <div id="2" onclick="changeBack(id)" class="non-selected-div">
+                        <input type="submit" name="currentItem" value="2">
+                        <label class="personName"> &#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;</label>
+                        <label class="personName"> &#x41F;&#x435;&#x442;&#x440;</label>
+                        <label class="personName"> &#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x447;</label>
+                        <label class="pos"> &#x413;&#x43B;&#x430;&#x432;&#x431;&#x443;&#x445;</label>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+                <form method="post" class="item-row" action="/">
+                    <div id="3" onclick="changeBack(id)" class="non-selected-div">
+                        <input type="submit" name="currentItem" value="3">
+                        <label class="personName"> &#x41F;&#x435;&#x442;&#x440;&#x43E;&#x432;</label>
+                        <label class="personName"> &#x41F;&#x435;&#x442;&#x440;</label>
+                        <label class="personName"> &#x41F;&#x435;&#x442;&#x440;&#x43E;&#x432;&#x438;&#x447;</label>
+                        <label class="pos"> &#x411;&#x440;&#x438;&#x433;&#x430;&#x434;&#x438;&#x440;</label>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+                <form method="post" class="item-row" action="/">
+                    <div id="4" onclick="changeBack(id)" class="non-selected-div">
+                        <input type="submit" name="currentItem" value="4">
+                        <label class="personName"> &#x41D;&#x438;&#x43A;&#x43E;&#x43B;&#x430;&#x435;&#x432;</label>
+                        <label class="personName"> &#x41D;&#x438;&#x43A;&#x43E;&#x43B;&#x430;&#x439;</label>
+                        <label class="personName"> &#x41D;&#x438;&#x43A;&#x43E;&#x43B;&#x430;&#x432;&#x438;&#x447;</label>
+                        <label class="pos"> &#x422;&#x43E;&#x43A;&#x430;&#x440;&#x44C;</label>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+                <form method="post" class="item-row" action="/">
+                    <div id="5" onclick="changeBack(id)" class="non-selected-div">
+                        <input type="submit" name="currentItem" value="5">
+                        <label class="personName"> &#x421;&#x435;&#x440;&#x433;&#x435;&#x435;&#x432;</label>
+                        <label class="personName"> &#x421;&#x435;&#x440;&#x433;&#x435;&#x439;</label>
+                        <label class="personName"> &#x421;&#x435;&#x440;&#x433;&#x435;&#x435;&#x432;&#x438;&#x447;</label>
+                        <label class="pos"> &#x421;&#x442;&#x440;&#x43E;&#x43F;&#x430;&#x43B;&#x44C;&#x449;&#x438;&#x43A;</label>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+            </div>
+
+            <div class="details_area">
+                <div><button id="editBtn" style="width:10em;">Редактировать</button></div>
+
+                <form method="post" asp-for="data" id="det_form" action="/Home/SaveChanges">
+                    <div><label>Стаж</label></div>
+                    <div>
+                        <textarea disabled class="det_item" name="WorkExperience" rows="1" style="width:10em">30</textarea>
+                    </div>
+                    <div>
+                        <label>Оклад</label>
+                    </div>
+                    <div>
+                        <select disabled class="det_item" name="Salary" style="width:10em">
+                            <option>150000</option>
+                            <option>150000</option>
+                            <option>100000</option>
+                            <option>50000</option>
+                            <option>15000</option>
+                            <option>15000</option>
+                        </select>
+                    </div>
+                    <script src="/js/datepicker.js"></script>
+                    <link rel="stylesheet" href="/css/datepicker.material.css">
+                    <div>
+                        <label>Дата назначения</label>
+                    </div>
+                    <div>
+                        <input disabled class="det_item" type="text" id="datepicker" name="EmpDate" value="20.07.2010 0:00:00" style="width:10em">
+                    </div>
+                    <div><textarea hidden name="Id">1</textarea></div>
+
+                    <script type="text/javascript">
+                        var datepicker = new Datepicker('#datepicker');
+                    </script>
+
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JJjZK-sE_ZHhWCkUciZjl3KI51hxpg-eB9jwA_mnjGpSJJAkz8lPm-jmmrgJh8y4vGKhCJxW13kcV1VX7v4vZGwjjC3DWK-dX7c8FXDKgzePb6xU0BWvlEQt4F8P0LbUSyJEjKkPqZE7wWe0tZIo8o" />
+                </form>
+                <div><button disabled id="saveBtn" form="det_form" type="submit" style="width:10em">Сохранить</button></div>
+                <script type="text/javascript">
+                    editBtn.onclick = function () {
+                        document.getElementById("saveBtn").removeAttribute("disabled");
+                        var els = document.getElementsByClassName("det_item");
+                        for (var i = 0; i < els.length; i++) {
+                            els.item(i).removeAttribute("disabled");
+                        }
+                    }
+                </script>
+            </div>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="lib/jquery/dist/jquery.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+
+
+
+    </body>
+    </html>

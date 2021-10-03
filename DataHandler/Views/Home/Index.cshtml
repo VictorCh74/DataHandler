@@ -2,8 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
 <div class="row">
     <div class="staff_items">
         @foreach (Person p in ViewBag.Staff)
@@ -19,21 +17,6 @@
             </form>
         }
     </div>
-    <div class="details_area">
-        <button id="editBtn">Редактировать</button>
-        <div class="column">
-            @await Html.PartialAsync("ItemDetails", (ViewBag.Staff as List<Person>).Where(p => p.Id == ViewBag.CurrentItem).FirstOrDefault())
-        </div>
-        <button disabled id="saveBtn" form="det_form" type="submit">Сохранить</button>
-    </div>
-    <script type="text/javascript">
-        editBtn.onclick = function () {
-            document.getElementById("saveBtn").removeAttribute("disabled");
-            var els = document.getElementsByClassName("det_item");
-            for (var i = 0; i < els.length; i++) {
-                els.item(i).removeAttribute("readonly");
-            }
-        }
-    </script>
-
+    @await Html.PartialAsync("ItemDetails", (ViewBag.Staff as List<Person>).
+         Where(p => p.Id == ViewBag.CurrentItem).FirstOrDefault())
 </div>

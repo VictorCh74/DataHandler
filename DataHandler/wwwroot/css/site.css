@@ -33,54 +33,77 @@ body {
         display: flex;
 }
 
+.container body-content {
+
+}
+
 .row {
     display: flex;
     flex-direction: row;
-    
     justify-content: space-around;
 }
 .staff_items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex-basis: 70%;
+    width:70%;
 }
 .item-row {
     display: flex;
+    flex-direction: row;
 }
 
 .personName {
     background-color: #edebea;
     text-align: left;
-    width:10em;
+    width:20% ;
 }
 
 .pos {
     background-color: #afeff4;
     text-align: left;
-    width:10em;
+    width:20%;
 }
 
-.details {
-    flex-direction: column;
-    justify-content:space-around;
-    background-color: #dcf0f9;
-    align-items:center ;
-}
 .details_area {
-    
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-}
-.selected-div {
-    background-color: #dcf0f9;
     justify-content: space-around;
+    flex-basis: auto;
+    background-color: #dcf0f9;
+    align-items: center;
+    height: 15em;
+    width: 20%;
+}
+
+    .details_area div {
+        flex:0 0 auto ;
+        height: auto;
+        width: auto;
+    }
+
+  
+
+.selected-div {
+    display: flex;
     flex-direction: row;
-    align-content:center ;
+    justify-content: space-around;
+    background-color: #dcf0f9;
+    align-content: center;
+    width: 100%;
 }
 .non-selected-div {
+    display: flex;
     background-color: #f8fbe4;
-    justify-content: space-around;
     flex-direction: row;
+    justify-content: space-around;
     align-content: center;
+    width: 100%;
+}
+.det_row {
+    display: flex;
+    flex-direction:column;
+    justify-content:center ;
+    align-content:center ;
+    background-color:yellow;
 }
